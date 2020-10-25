@@ -1,6 +1,6 @@
 <?php
 /**
- * @package RB_Sabot_Plugin
+ * @package Sabot_Plugin
  * @version 1.0.0
  */
 /*
@@ -34,7 +34,7 @@ add_action( 'admin_notices', 'Thank you for using Sabot' );
 
 /* Now we must set up the cstom post type */
 
-function rb_sabot_products_post_type() {
+function sabot_products_post_type() {
     register_post_type('sabot_product',
         array(
             'labels'      => array(
@@ -46,12 +46,12 @@ function rb_sabot_products_post_type() {
         )
     );
 }
-add_action('init', 'rb_sabot_products_post_type');
+add_action('init', 'sabot_products_post_type');
 
 
 
 
-function rb_sabot_products_taxonomy() {
+function sabot_products_taxonomy() {
      $labels = array(
          'name'              => _x( 'Products', 'taxonomy general name' ),
          'singular_name'     => _x( 'Product', 'taxonomy singular name' ),
@@ -75,7 +75,7 @@ function rb_sabot_products_taxonomy() {
      );
      register_taxonomy( 'sabot_product', [ 'post' ], $args );
 }
-add_action( 'init', 'rb_sabot_products_taxonomy' );
+add_action( 'init', 'sabot_products_taxonomy' );
 
 
 
