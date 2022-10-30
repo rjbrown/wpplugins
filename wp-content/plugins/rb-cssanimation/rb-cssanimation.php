@@ -11,6 +11,9 @@ Author: Bobby Brown
 Version: 0.1
 */
 
+//Enque Needed scripts
+wp_enqueue_script( 'rb-cssanimation', plugins_url() . '/rb-cssanimation/js/rb-audio.js', NULL, '0.1' );
+
 // We need some CSS
 function animate_css() {
 	echo "
